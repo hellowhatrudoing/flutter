@@ -56,10 +56,18 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
         );
       });
 
       testWithoutContext('succeeds in opening and debugging with launch options and verbose logging', () async {
+=======
+          hostAppProjectName: 'Runner',
+        );
+      });
+
+      testWithoutContext('succeeds in opening and debugging with launch options, expectedConfigurationBuildDir, and verbose logging', () async {
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
         fakeProcessManager.addCommands(<FakeCommand>[
           FakeCommand(
             command: <String>[
@@ -88,6 +96,10 @@ void main() {
               pathToXcodeApp,
               '-g',
               '-j',
+<<<<<<< HEAD
+=======
+              '-F',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               xcworkspace.path
             ],
           ),
@@ -105,6 +117,13 @@ void main() {
               project.xcodeProject.path,
               '--workspace-path',
               project.xcodeWorkspace.path,
+<<<<<<< HEAD
+=======
+              '--project-name',
+              project.hostAppProjectName,
+              '--expected-configuration-build-dir',
+              '/build/ios/iphoneos',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               '--device-id',
               deviceId,
               '--scheme',
@@ -131,6 +150,11 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
+=======
+          hostAppProjectName: 'Runner',
+          expectedConfigurationBuildDir: '/build/ios/iphoneos',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
           verboseLogging: true,
         );
 
@@ -150,7 +174,11 @@ void main() {
         expect(status, true);
       });
 
+<<<<<<< HEAD
       testWithoutContext('succeeds in opening and debugging without launch options and verbose logging', () async {
+=======
+      testWithoutContext('succeeds in opening and debugging without launch options, expectedConfigurationBuildDir, and verbose logging', () async {
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
         fakeProcessManager.addCommands(<FakeCommand>[
           FakeCommand(
             command: <String>[
@@ -178,6 +206,10 @@ void main() {
               pathToXcodeApp,
               '-g',
               '-j',
+<<<<<<< HEAD
+=======
+              '-F',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               xcworkspace.path
             ],
           ),
@@ -195,6 +227,11 @@ void main() {
               project.xcodeProject.path,
               '--workspace-path',
               project.xcodeWorkspace.path,
+<<<<<<< HEAD
+=======
+              '--project-name',
+              project.hostAppProjectName,
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               '--device-id',
               deviceId,
               '--scheme',
@@ -257,6 +294,10 @@ void main() {
               pathToXcodeApp,
               '-g',
               '-j',
+<<<<<<< HEAD
+=======
+              '-F',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               xcworkspace.path
             ],
             exception: ProcessException(
@@ -266,6 +307,10 @@ void main() {
                 '/non_existant_path',
                 '-g',
                 '-j',
+<<<<<<< HEAD
+=======
+                '-F',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
                 xcworkspace.path,
               ],
               'The application /non_existant_path cannot be opened for an unexpected reason',
@@ -332,6 +377,11 @@ void main() {
               project.xcodeProject.path,
               '--workspace-path',
               project.xcodeWorkspace.path,
+<<<<<<< HEAD
+=======
+              '--project-name',
+              project.hostAppProjectName,
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               '--device-id',
               deviceId,
               '--scheme',
@@ -401,6 +451,11 @@ void main() {
               project.xcodeProject.path,
               '--workspace-path',
               project.xcodeWorkspace.path,
+<<<<<<< HEAD
+=======
+              '--project-name',
+              project.hostAppProjectName,
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               '--device-id',
               deviceId,
               '--scheme',
@@ -474,6 +529,11 @@ void main() {
               project.xcodeProject.path,
               '--workspace-path',
               project.xcodeWorkspace.path,
+<<<<<<< HEAD
+=======
+              '--project-name',
+              project.hostAppProjectName,
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               '--device-id',
               deviceId,
               '--scheme',
@@ -547,6 +607,11 @@ void main() {
               project.xcodeProject.path,
               '--workspace-path',
               project.xcodeWorkspace.path,
+<<<<<<< HEAD
+=======
+              '--project-name',
+              project.hostAppProjectName,
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
               '--device-id',
               deviceId,
               '--scheme',
@@ -674,6 +739,10 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
+=======
+          hostAppProjectName: 'Runner',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
         );
         final XcodeDebug xcodeDebug = XcodeDebug(
           logger: logger,
@@ -731,6 +800,10 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
+=======
+          hostAppProjectName: 'Runner',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
           isTemporaryProject: true,
         );
 
@@ -794,6 +867,10 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
+=======
+          hostAppProjectName: 'Runner',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
           isTemporaryProject: true,
         );
         final XcodeDebug xcodeDebug = XcodeDebug(
@@ -857,6 +934,10 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
+=======
+          hostAppProjectName: 'Runner',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
         );
         final XcodeDebug xcodeDebug = XcodeDebug(
           logger: logger,
@@ -899,6 +980,10 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
+=======
+          hostAppProjectName: 'Runner',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
           isTemporaryProject: true,
         );
         final XcodeDebug xcodeDebug = XcodeDebug(
@@ -950,6 +1035,10 @@ void main() {
           scheme: 'Runner',
           xcodeProject: xcodeproj,
           xcodeWorkspace: xcworkspace,
+<<<<<<< HEAD
+=======
+          hostAppProjectName: 'Runner',
+>>>>>>> 78666c8dc57e9f7548ca9f8dd0740fbf0c658dc9
         );
       });
 
